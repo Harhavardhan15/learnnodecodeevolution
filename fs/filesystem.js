@@ -10,6 +10,15 @@ if(error){
     console.log(data)
 }
 })
-console.log('three')
 
+console.log('three');
+fs.writeFileSync('./createnewfile.txt',"this is a new text for the new file change")
+
+fs.writeFile('./createnewfile.txt','-append new hello harsha',{flag:'a'},(err,data)=>{
+if(err){
+    console.log(err)
+}else{
+    console.log('data append success')
+}
+})
 
